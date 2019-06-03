@@ -1,0 +1,19 @@
+@import './_variables';
+
+%textHoverUnderline {
+  text-decoration: none;
+
+  @media (min-width: $media-desktop) {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+%opacity {
+  @media (min-width: $media-desktop) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
