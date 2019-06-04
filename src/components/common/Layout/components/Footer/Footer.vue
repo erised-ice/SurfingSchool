@@ -1,12 +1,22 @@
 <template>
   <footer>
-    Footer
+    <footer-inner
+      mode="medium"
+    >
+      Footer
+    </footer-inner>
+
   </footer>
 </template>
 
 <script>
+  import Inner from '../Inner/Inner'
+
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  components: {
+    'footer-inner': Inner
+  }
 }
 </script>
 

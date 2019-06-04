@@ -28,8 +28,5 @@ export default {
     justify-content: space-between;
     min-height: 100vh;
     width: 100%;
-    max-width: 1480px;
-    padding: 0 20px;
-    margin: 0 auto;
   }
 </style>

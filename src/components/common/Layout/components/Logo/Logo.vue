@@ -1,6 +1,6 @@
 <template>
   <div class="logo">
-    <img class="logo__img" src="#" alt="">
+    <img class="logo__img" src="../../../../../assets/img/template/logo.png" alt="">
   </div>
 </template>
 
@@ -14,7 +14,6 @@
   .logo {
     width: 41px;
     height: 35px;
-    background: deeppink;
     max-width: 100%;
   }
 </style>
