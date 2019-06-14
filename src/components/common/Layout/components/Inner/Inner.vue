@@ -1,7 +1,7 @@
 <template>
   <div
     class="inner"
-    :class="[`inner--${mode}`]"
+    :class="`inner--${mode}`"
   >
     <slot />
   </div>

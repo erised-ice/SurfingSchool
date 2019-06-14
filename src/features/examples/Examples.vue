@@ -71,13 +71,13 @@
 
 <script>
 import Layout from '@components/common/Layout/Layout' // импорты всегда после открывадщего тэго скрипт
-import Button from './components/Button';
+import ButtonExample from './components/ButtonExample';
 
 export default {
   name: 'Examples', // name всегда строка - поэтому в кавычках
   components: {
     'app-layout': Layout, // здесь можно в кавычках придумать любое название компонента, которое потом можно использовать в ХТМЛ, как тэг.
-    'example-button': Button
+    'example-button': ButtonExample
   },
   data() { // локальное состояние компонета.  https://ru.vuejs.org/v2/guide/components.html#%D0%A1%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE-data-%D0%B4%D0%BE%D0%BB%D0%B6%D0%BD%D0%BE-%D0%B1%D1%8B%D1%82%D1%8C-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B5%D0%B9
     return {
