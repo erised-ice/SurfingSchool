@@ -21,6 +21,14 @@
     <index-button></index-button>
     <index-button :is-big="true">Enroll Now</index-button>
 
+    <index-video></index-video>
+    <index-video :is-big="true"></index-video>
+
+    <instructor>
+      <template slot="name">Simon Adward</template>
+      <template slot="amount">5,000</template>
+    </instructor>
+
     <page-title titleType="h2">Popular Instractors</page-title>
     <paragraph :letterSpacing="1">Text in the cite Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, voluptas?</paragraph>
     <page-title titleType="h3">Recent Reviews</page-title>
@@ -52,6 +60,8 @@ import Title from '@components/common/content/Title/Title';
 import Paragraph from '@components/common/content/Paragraph/Paragraph'
 import Cite from '@components/common/content//Cite/Cite'
 import Button from '@components/common/Button/Button'
+import Video from '@components/common/Video/Video.vue'
+import Instructor from '@components/common/Instructor/Instructor.vue'
 
 
 export default {
@@ -61,7 +71,9 @@ export default {
     'page-title': Title,
     'paragraph': Paragraph,
     'index-cite': Cite,
-    'index-button': Button
+    'index-button': Button,
+    'index-video': Video,
+    'instructor': Instructor
   },
 }
 </script>
