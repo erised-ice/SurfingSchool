@@ -4,11 +4,11 @@
       <img class="instructor__img" src="/static/img/content/Simon.png" alt="Instructors photo">
     </div>
     <p class="instructor__name">
-      <slot name="name"/>
+      {{name}}
     </p>
     <p class="instructor__description">
       <span>
-        <slot name="amount"/>
+        {{amount}}
       </span>
       <span>students</span>
     </p>
@@ -19,6 +19,14 @@
 <script>
   export default {
     name: 'Instructor',
+    props: {
+      name: {
+        type: String,
+      },
+      amount: {
+        type: String,
+      }
+    }
   }
 </script>
 

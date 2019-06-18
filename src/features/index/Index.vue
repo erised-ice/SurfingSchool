@@ -10,24 +10,11 @@
         </div>
       </page-inner>
     </div>
-    <div class="video">
-      <page-inner mode="wide" class="video__content">
-        <div class="video__reviews"></div>
-        <div class="video__main"></div>
-        <div class="video__user-videos"></div>
-      </page-inner>
-    </div>
-
+    <index-video></index-video>
+    <instructors></instructors>
+<!--Ниже идут компоненты, еще не везде вставленные в разметку-->
     <index-button></index-button>
     <index-button :is-big="true">Enroll Now</index-button>
-
-    <index-video></index-video>
-    <index-video :is-big="true"></index-video>
-
-    <instructor>
-      <template slot="name">Simon Adward</template>
-      <template slot="amount">5,000</template>
-    </instructor>
 
     <blog-preview mode="text-first">
       <template slot="title">Lipsum cound be headline </template>
@@ -68,10 +55,9 @@
 import Inner from '@components/common/Inner/Inner';
 import Title from '@components/common/content/Title/Title';
 import Paragraph from '@components/common/content/Paragraph/Paragraph'
-import Cite from '@components/common/content//Cite/Cite'
+import IndexVideo from '@features/index/components/IndexVideo'
+import Instructors from '@features/index/components/Instructors'
 import Button from '@components/common/Button/Button'
-import Video from '@components/common/Video/Video.vue'
-import Instructor from '@components/common/Instructor/Instructor'
 import BlogPreview from '@components/common/BlogPreview/BlogPreview'
 
 
@@ -81,10 +67,9 @@ export default {
     'page-inner': Inner,
     'page-title': Title,
     'paragraph': Paragraph,
-    'index-cite': Cite,
+    'index-video': IndexVideo,
+    'instructors': Instructors,
     'index-button': Button,
-    'index-video': Video,
-    'instructor': Instructor,
     'blog-preview': BlogPreview,
   },
 }

@@ -13,6 +13,7 @@
     props: {
       mode: {
         type: String,
+        default: 'narrow',
       }
     }
   }
