@@ -3,8 +3,10 @@
     <ul class="nav__list" >
       <nav-item
         v-for="(link, index) in links"
-        :text="link"
+        :text="link.text"
+        :link="link.link"
         :key="index"
+        class
       />
     </ul>
   </nav>
@@ -20,7 +22,24 @@ export default {
   },
   data() {
     return {
-      links: ['Home', 'About', 'Blog', 'Contact']
+      links: [
+        {
+          text: 'Home',
+          link: '/'
+        },
+        {
+          text: 'About',
+          link: '/about'
+        },
+        {
+          text: 'Blog',
+          link: '/examples'
+        },
+        {
+          text: 'Contact',
+          link: '/contacts'
+        }
+      ]
     }
   }
 }

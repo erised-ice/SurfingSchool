@@ -10,7 +10,7 @@
 </template>
 
 <script>
-  import Inner from '../Inner/Inner'
+  import Inner from '../../../Inner/Inner'
 
 export default {
   name: 'Footer',

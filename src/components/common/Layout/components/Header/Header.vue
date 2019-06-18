@@ -11,9 +11,9 @@
 </template>
 
 <script>
-import Inner from '../Inner/Inner'
-import Logo from '../Logo/Logo'
-import Nav from '../Nav/Nav'
+import Inner from '@components/common/Inner/Inner'
+import Logo from '@components/common/Logo/Logo'
+import Nav from '@components/common/Nav/Nav'
 
 export default {
   name: 'Header',

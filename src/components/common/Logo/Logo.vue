@@ -1,6 +1,6 @@
 <template>
   <div class="logo">
-    <img class="logo__img" src="../../../../../../static/img/template/logo.png" alt="">
+    <img class="logo__img" src="/static/img/template/logo.png" alt="">
   </div>
 </template>
 

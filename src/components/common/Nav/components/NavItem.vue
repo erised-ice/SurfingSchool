@@ -1,6 +1,6 @@
 <template>
   <li class="nav-item">
-    <a href="#" class="nav-item__link">{{text}}</a>
+    <router-link :to="link" class="nav-item__link">{{text}}</router-link>
   </li>
 </template>
 
@@ -11,6 +11,10 @@
       text: {
         type: String,
         required: true,
+      },
+      link: {
+        type: String,
+        default: '#'
       }
     }
   }
@@ -20,13 +24,18 @@
   .nav-item {
     list-style-type: none;
 
-    &__link {
-      @extend %textHoverUnderline;
 
+    &__link {
       color: $gray;
+      text-decoration: none;
       font-size: $font15;
       text-transform: uppercase;
       padding: 0 auto;
+      font-weight: 500;
+
+      &.router-link-exact-active {
+        color: $black;
+      }
     }
   }
 </style>

@@ -1,12 +1,29 @@
 <template>
   <div class="index">
-    <main-title>Long Beach Surfing Institute</main-title>
+    <div class="title">
+      <page-inner mode="wide">
+        <div class="title__title">
+          <page-title>Long Beach Surfing Institute</page-title>
+        </div>
+        <div class="title__paragraph">
+          <paragraph style="text-align: center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</paragraph>
+        </div>
+      </page-inner>
+    </div>
+    <div class="video">
+      <page-inner mode="wide" class="video__content">
+        <div class="video__reviews"></div>
+        <div class="video__main"></div>
+        <div class="video__user-videos"></div>
+      </page-inner>
+    </div>
+
     <index-button></index-button>
     <index-button :is-big="true">Enroll Now</index-button>
-    <paragraph>Text under the main title Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, necessitatibus!</paragraph>
-    <middle-title>Popular Instractors</middle-title>
+
+    <page-title titleType="h2">Popular Instractors</page-title>
     <paragraph :letterSpacing="1">Text in the cite Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, voluptas?</paragraph>
-    <small-title>Recent Reviews</small-title>
+    <page-title titleType="h3">Recent Reviews</page-title>
     <paragraph mode="dark">Text near the blog photos Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis delectus doloremque eius est fuga in molestias quae quisquam sunt, voluptatum.</paragraph>
     <div class="index__cite">
       <index-cite>
@@ -30,27 +47,38 @@
 </template>
 
 <script>
-import TitleH1 from '@components/common/Layout/components/Title/TitleH1'
-import TitleH2 from '@components/common/Layout/components/Title/TitleH2'
-import TitleH3 from '@components/common/Layout/components/Title/TitleH3'
-import Paragraph from '@components/common/Layout/components/Paragraph/Paragraph'
-import Cite from '@components/common/Layout/components/Cite/Cite'
-import Button from '@components/common/Layout/components/Button/Button'
+import Inner from '@components/common/Inner/Inner';
+import Title from '@components/common/content/Title/Title';
+import Paragraph from '@components/common/content/Paragraph/Paragraph'
+import Cite from '@components/common/content//Cite/Cite'
+import Button from '@components/common/Button/Button'
 
 
 export default {
   name: 'Index',
   components: {
-    'main-title': TitleH1,
-    'middle-title': TitleH2,
-    'small-title': TitleH3,
+    'page-inner': Inner,
+    'page-title': Title,
     'paragraph': Paragraph,
     'index-cite': Cite,
     'index-button': Button
-  }
+  },
 }
 </script>
 <style scoped lang="scss">
+  .title__title {
+    margin-bottom: 30px;
+  }
+
+  .title__paragraph {
+    width: 584px;
+    margin: 0 auto;
+  }
+
+  .video__content {
+    display: flex;
+  }
+
   .index__cite {
     margin-left: 160px;
     margin-bottom: 45px;
