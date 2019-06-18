@@ -29,6 +29,16 @@
       <template slot="amount">5,000</template>
     </instructor>
 
+    <blog-preview mode="text-first">
+      <template slot="title">Lipsum cound be headline </template>
+      <template slot="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</template>
+    </blog-preview>
+
+    <blog-preview>
+      <template slot="title">Lipsum cound be headline </template>
+      <template slot="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</template>
+    </blog-preview>
+
     <page-title titleType="h2">Popular Instractors</page-title>
     <paragraph :letterSpacing="1">Text in the cite Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, voluptas?</paragraph>
     <page-title titleType="h3">Recent Reviews</page-title>
@@ -61,7 +71,8 @@ import Paragraph from '@components/common/content/Paragraph/Paragraph'
 import Cite from '@components/common/content//Cite/Cite'
 import Button from '@components/common/Button/Button'
 import Video from '@components/common/Video/Video.vue'
-import Instructor from '@components/common/Instructor/Instructor.vue'
+import Instructor from '@components/common/Instructor/Instructor'
+import BlogPreview from '@components/common/BlogPreview/BlogPreview'
 
 
 export default {
@@ -73,7 +84,8 @@ export default {
     'index-cite': Cite,
     'index-button': Button,
     'index-video': Video,
-    'instructor': Instructor
+    'instructor': Instructor,
+    'blog-preview': BlogPreview,
   },
 }
 </script>

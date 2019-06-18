@@ -43,6 +43,5 @@
     @extend %title;
 
     font-size: $fontTitleSmall;
-    color: yellow;
   }
 </style>
