@@ -13,6 +13,7 @@
     props: {
       mode: {
         type: String,
+        default: 'narrow',
       }
     }
   }
@@ -25,7 +26,6 @@
     padding-left: 20px;
     padding-right: 20px;
     width: 100%;
-    background: aqua;
 
     &--wide {
       max-width: 1480px;

@@ -1,11 +1,11 @@
 <template>
   <blockquote class="blockquote">
     <cite-paragraph class="blockquote__paragraph">
-      <slot name="paragraph" />
+      {{text}}
     </cite-paragraph>
     <br />
     <cite class="cite">
-      <slot name="author" />
+      {{author}}
     </cite>
   </blockquote>
 </template>
@@ -17,6 +17,14 @@ import Paragraph from '../Paragraph/Paragraph'
     name: 'Cite',
     components: {
       'cite-paragraph': Paragraph
+    },
+    props: {
+      text: {
+        type: String,
+      },
+      author: {
+        type: String,
+      }
     }
   }
 </script>
@@ -31,7 +39,9 @@ import Paragraph from '../Paragraph/Paragraph'
 
   .blockquote {
     padding: 0 0 22px;
-    margin: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
     border-bottom: 1px solid $beige;
   }
 

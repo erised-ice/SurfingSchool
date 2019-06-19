@@ -32,6 +32,7 @@
       text-transform: uppercase;
       padding: 0 auto;
       font-weight: 500;
+      margin: 0;
 
       &.router-link-exact-active {
         color: $black;

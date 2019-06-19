@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Index from '@features/Index'
+import Index from '@features/index/Index.vue'
 import Layout from '@components/common/Layout/Layout'
 
 export default {

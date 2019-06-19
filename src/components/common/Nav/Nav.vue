@@ -6,7 +6,7 @@
         :text="link.text"
         :link="link.link"
         :key="index"
-        class
+        class="nav__item"
       />
     </ul>
   </nav>
@@ -51,7 +51,6 @@ export default {
     display: flex;
     justify-content: space-between;
     padding: 0;
-    margin-left: auto;
     width: 424px;
   }
 }
