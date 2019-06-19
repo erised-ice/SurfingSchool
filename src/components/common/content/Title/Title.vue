@@ -1,12 +1,24 @@
 <template>
   <div>
-    <h1 class="title-h1" v-if="titleType === 'h1'">
+    <h1
+      class="title-h1"
+      :class="{'title--italic': isItalic}"
+      v-if="titleType === 'h1'"
+    >
       <slot />
     </h1>
-    <h2 class="title-h2" v-if="titleType === 'h2'">
+    <h2
+      class="title-h2"
+      :class="{'title--italic': isItalic}"
+      v-if="titleType === 'h2'"
+    >
       <slot />
     </h2>
-    <h2 class="title-h3" v-if="titleType === 'h3'">
+    <h2
+      class="title-h3"
+      :class="{'title--italic': isItalic}"
+      v-if="titleType === 'h3'"
+    >
       <slot />
     </h2>
   </div>
@@ -19,29 +31,40 @@
       titleType: {
         type: String,
         default: 'h1'
+      },
+      isItalic: {
+        type: Boolean,
+        default: false
       }
     }
   }
 </script>
 
 <style scoped lang="scss">
-  .title-h1 {
-    @extend %title;
+  .title {
 
-    font-size: $fontTitleMain;
-    text-align: center;
-  }
+    &-h1 {
+      @extend %title;
 
-  .title-h2 {
-    @extend %title;
+      font-size: $fontTitleMain;
+      text-align: center;
+    }
 
-    color: lawngreen;
-    font-size: $fontTitleMiddle;
-  }
+    &-h2 {
+      @extend %title;
 
-  .title-h3 {
-    @extend %title;
+      font-size: $fontTitleMiddle;
+      text-align: center;
+    }
 
-    font-size: $fontTitleSmall;
+    &-h3 {
+      @extend %title;
+
+      font-size: $fontTitleSmall;
+    }
+
+    &--italic {
+      font-style: italic;
+    }
   }
 </style>

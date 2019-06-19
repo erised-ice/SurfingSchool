@@ -1,14 +1,11 @@
 <template>
-  <video
-    controls
-    preload="metadata"
+
+  <div
     class="video"
     :class="{'video--big': isBig}"
   >
-    <source>
-      <iframe width="1003" height="564" src="https://www.youtube.com/embed/nkhpGC10OVw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </source>
-  </video>
+    <iframe width="100%" height="100%" :src="src" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
 </template>
 
 <script>
@@ -18,6 +15,10 @@
       isBig: {
         type: Boolean,
         default: false,
+      },
+      src: {
+        type: String,
+        default: 'https://www.youtube.com/embed/b6hoBp7Hk-A'
       }
     }
   }

@@ -4,14 +4,14 @@
     :class="`blog-preview--${mode}`"
   >
     <div class="blog-preview__picture">
-      <img src="/static/img/content/blog1.png" alt="surfing" class="blog-preview__img">
+      <img :src="src" class="blog-preview__img" alt="blog-picture">
     </div>
     <div class="blog-preview__text">
-      <blog-preview-title titleType="h3">
-        <slot name="title" />
+      <blog-preview-title titleType="h3" :isItalic="true">
+        {{title}}
       </blog-preview-title>
       <blog-preview-paragraph mode="dark">
-        <slot name="paragraph" />
+        {{paragraph}}
       </blog-preview-paragraph>
       <blog-preview-button class="blog-preview__button">
         Read More
@@ -36,6 +36,18 @@ export default {
     mode: {
       type: String,
       default: 'picture-first'
+    },
+    src: {
+      type: String,
+      default: '/static/img/content/blog2.png'
+    },
+    title: {
+      type: String,
+      default: 'title'
+    },
+    paragraph: {
+      type: String,
+      default: 'text'
     }
   },
 }
@@ -66,24 +78,16 @@ export default {
     }
 
     &--picture-first {
-      background-color: red;
-    }
-
-    &--text-first {
-      background-color: blue;
-    }
-
-    &--picture-first {
       .blog-preview__text {
+        max-width: 528px;
         padding: 51px 0 44px 77px;
-        color: red;
       }
     }
 
     &--text-first {
       .blog-preview__text {
+        max-width: 528px;
         padding: 51px 77px 44px 0;
-        background-color: yellow;
       }
 
       .blog-preview__picture {

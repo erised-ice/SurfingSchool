@@ -1,7 +1,7 @@
 <template>
   <div class="instructor">
     <div class="instructor__picture">
-      <img class="instructor__img" src="/static/img/content/Simon.png" alt="Instructors photo">
+      <img class="instructor__img" :src="src" alt="Instructors photo">
     </div>
     <p class="instructor__name">
       {{name}}
@@ -20,6 +20,9 @@
   export default {
     name: 'Instructor',
     props: {
+      src: {
+        type: String,
+      },
       name: {
         type: String,
       },

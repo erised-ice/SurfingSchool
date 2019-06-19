@@ -39,7 +39,9 @@ import Paragraph from '../Paragraph/Paragraph'
 
   .blockquote {
     padding: 0 0 22px;
-    margin: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
     border-bottom: 1px solid $beige;
   }
 

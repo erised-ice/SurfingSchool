@@ -1,11 +1,12 @@
 <template>
   <instructors-inner>
-    <instructors-title titleType="h2">
+    <instructors-title titleType="h2" class="instructors__title">
       Popular Instructors
     </instructors-title>
     <div class="instructors__items">
       <instructor
         v-for="(instructor, index) in instructors"
+        :src="instructor.src"
         :name="instructor.name"
         :amount="instructor.amount"
         :key="index"
@@ -30,16 +31,19 @@ export default {
     return {
       instructors: [
         {
+          src: '/static/img/content/Simon.png',
           name: 'Simon Adward',
-          amount: '1111'
+          amount: '5,000'
         },
         {
-          name: 'Name Two',
-          amount: '2222'
+          src: '/static/img/content/Elliana.png',
+          name: 'Elliana D’Soza',
+          amount: '4,350'
         },
         {
-          name: 'Name Three',
-          amount: '3333'
+          src: '/static/img/content/Joseph.png',
+          name: 'Joseph Bardon',
+          amount: '3,248'
         },
       ]
     }
@@ -48,9 +52,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .instructors__items {
-    background: greenyellow;
-    display: flex;
-    justify-content: space-between;
+  .instructors {
+    &__title {
+      margin-bottom: 90px;
+    }
+    &__items {
+      display: flex;
+      justify-content: space-between;
+    }
   }
+
 </style>
